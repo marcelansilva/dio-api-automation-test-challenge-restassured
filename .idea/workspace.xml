@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a93b56eb-b725-4e8d-987b-53f0581606f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-automation-tests-challenge-rest-assured.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/BookingDates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Ressources/createBookingRequestSchema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Ressources/createBookingResponseSchema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookingTests.java" afterDir="false" />
+    <list default="true" id="a93b56eb-b725-4e8d-987b-53f0581606f2" name="Changes" comment="first commit.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/BookingBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/PartialBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/TokenBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Tokencreds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/createBookingRequestSchema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-automation-tests-challenge-rest-assured.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api-automation-tests-challenge-rest-assured.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/BookingDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/BookingDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Ressources/createBookingRequestSchema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Ressources/createBookingResponseSchema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/createBookingResponseSchema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookingTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,32 +56,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/workspace/gft/java/mockito/APIAutomationRestAssured",
+    "last_opened_file_path": "C:/workspace/gft/java/selenium/api-automation-tests-challenge-rest-assured",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BookingTests.CreateBooking_WithValidData_returnOk">
-    <configuration name="BookingTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-automation-tests-challenge-rest-assured" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookingTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookingTests.CreateBooking_WithValidData_ReturnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-automation-tests-challenge-rest-assured" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookingTests" />
-      <option name="METHOD_NAME" value="CreateBooking_WithValidData_ReturnOk" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.BookingTests.DeleteBookingTest_ReturnOk">
     <configuration name="BookingTests.CreateBooking_WithValidData_returnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api-automation-tests-challenge-rest-assured" />
       <option name="PACKAGE_NAME" value="" />
@@ -94,21 +73,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingTests.DeleteBookingTest_ReturnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="api-automation-tests-challenge-rest-assured" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="BookingTests" />
+      <option name="METHOD_NAME" value="DeleteBookingTest_ReturnOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingTests.UpdateBooking_WithValidData_returnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-automation-tests-challenge-rest-assured" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BookingTests" />
+      <option name="METHOD_NAME" value="UpdateBooking_WithValidData_returnOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingTests.UpdatePartialBookingTest_returnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-automation-tests-challenge-rest-assured" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BookingTests" />
+      <option name="METHOD_NAME" value="UpdatePartialBookingTest_returnOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingTests.updatePartialBookingTest_returnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-automation-tests-challenge-rest-assured" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BookingTests" />
+      <option name="METHOD_NAME" value="updatePartialBookingTest_returnOk" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookingTests.DeleteBookingTest_ReturnOk" />
+        <item itemvalue="JUnit.BookingTests.UpdatePartialBookingTest_returnOk" />
+        <item itemvalue="JUnit.BookingTests.UpdateBooking_WithValidData_returnOk" />
+        <item itemvalue="JUnit.BookingTests.updatePartialBookingTest_returnOk" />
         <item itemvalue="JUnit.BookingTests.CreateBooking_WithValidData_returnOk" />
-        <item itemvalue="JUnit.BookingTests" />
-        <item itemvalue="JUnit.UserTests" />
-        <item itemvalue="JUnit.BookingTests.CreateBooking_WithValidData_ReturnOk" />
       </list>
     </recent_temporary>
   </component>
@@ -121,6 +132,18 @@
       <option name="presentableId" value="Default" />
       <updated>1674938255519</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit.">
+      <created>1674943658975</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674943658975</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit." />
   </component>
 </project>

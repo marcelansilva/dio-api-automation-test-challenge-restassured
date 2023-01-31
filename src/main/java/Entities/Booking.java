@@ -1,21 +1,35 @@
 package Entities;
 
+
+import com.github.javafaker.Faker;
+import lombok.Builder;
+import lombok.Data;
+
+import java.text.SimpleDateFormat;
+import java.util.concurrent.TimeUnit;
+
+@Data
+@Builder
 public class Booking {
 
     private String firstname;
     private String lastname;
-    private float totalprice;
+    private double totalprice;
     private boolean depositpaid;
     private BookingDates bookingdates;
     private String additionalneeds;
 
-    public Booking(String firstName, String lastName, float totalPrice, boolean depositPaid, BookingDates bookingDates, String additionalNeeds) {
+
+
+
+    public Booking(String firstName, String lastName, double totalPrice, boolean depositPaid, BookingDates bookingDates, String additionalNeeds) {
         this.firstname = firstName;
         this.lastname = lastName;
         this.totalprice = totalPrice;
         this.depositpaid = depositPaid;
         this.bookingdates = bookingDates;
         this.additionalneeds = additionalNeeds;
+
     }
 
     public String getFirstname() {
@@ -34,11 +48,11 @@ public class Booking {
         this.lastname = lastname;
     }
 
-    public float getTotalprice() {
+    public double getTotalprice() {
         return totalprice;
     }
 
-    public void setTotalprice(float totalprice) {
+    public void setTotalprice(double totalprice) {
         this.totalprice = totalprice;
     }
 
@@ -65,4 +79,6 @@ public class Booking {
     public void setAdditionalneeds(String additionalneeds) {
         this.additionalneeds = additionalneeds;
     }
+
+
 }
